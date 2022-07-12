@@ -7,7 +7,21 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+    let string = "";
+    if ((str == "") || (str == " ")){
+      return str;
+    }
+    if (str.substring(str.length - 1) == " "){
+      string = str.substring( 0, str.length - 1);
+    } 
+    else {
+      string = str;
+    }
+    let wordSplit = string.split(" ");
+    for (let i = 0; i < wordSplit.length; i++) {
+      wordSplit[i] = wordSplit[i][0].toUpperCase() + wordSplit[i].slice(1,wordSplit[i].length);
+    }
+    return wordSplit.join(" ");
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

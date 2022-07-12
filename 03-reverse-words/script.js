@@ -9,9 +9,11 @@
 */
 
 function reverseWords(str) {
-    // Напишите код здесь
+    const splitStr = str.split(" ");
+    const reverseStr = splitStr.reverse();
+    const joinStr = reverseStr.join(" ");
+    return joinStr;
 }
-
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(reverseWords('всегда много путей достичь цель есть')); // "есть цель достичь путей много всегда"

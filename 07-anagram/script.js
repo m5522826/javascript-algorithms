@@ -9,7 +9,21 @@
 */
 
 function anagram(str1, str2) {
-    // Напишите код здесь
+    if (str1.length != str2.length ) {
+        return false;
+    }  
+    if (str1.toUpperCase() == str2.toUpperCase() ) {
+        return false;
+    }
+    const array1 = str1.toUpperCase().split(""); 
+    const array2 = str2.toUpperCase().split("");  
+    for (i = 0; i < array1.length; i++) {
+        if (!array2.includes(array1[i])) { 
+                console.log("is false");
+                return false;
+            } 
+        }
+    return true;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -9,7 +9,31 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+    let number = 0;
+    let numberOld = 0;
+    let result = 0;
+    if (n == 0){
+        return number;
+    }
+    for (i=0; i < n; i++){
+        if (i == 0){
+          numberOld = number;
+          number = 0;
+          result=number+numberOld;
+        }
+        if (i == 1){
+            numberOld=number;
+            number=number+1;
+            result=number+numberOld;
+        }
+        if (i > 1){
+            result=number+numberOld;
+            numberOld=number;
+            number=result;
+        }
+    }
+    console.log(result);
+    return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -14,7 +14,14 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    const strReverse = str.split('').reverse().join('')
+    // console.log(strReverse);
+         if (str.toUpperCase() == strReverse.toUpperCase()){
+             i = true;
+             return i;
+         }
+             i = false;
+             return i;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
